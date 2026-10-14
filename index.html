@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Deependra Singh | Senior Software Engineer (Node.js, Nest.js, React)</title>
+<meta name="description" content="Portfolio of Deependra Singh, Senior Software Engineer with 6 years of experience in Node.js, Nest.js, React.js, MongoDB and Generative AI.">
+<meta name="theme-color" content="#0a1226">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,600;9..144,700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{
+  --bg:#0a1226; --wine:#111c36; --wine-2:#16264a; --blue:#4f8cff; --rose:#8db4ff;
+  --text:#eaf0ff; --muted:#9fb0d0; --line:rgba(130,170,255,.18);
+  --serif:'Fraunces',Georgia,'Times New Roman',serif;
+  --sans:'Inter',system-ui,-apple-system,'Segoe UI',Roboto,sans-serif;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{overflow-x:clip;scroll-behavior:smooth;scroll-padding-top:90px}
+body{font-family:var(--sans);color:var(--text);background:var(--bg);line-height:1.65;overflow-x:hidden;
+  background-image:radial-gradient(900px 600px at 50% -10%,rgba(37,99,235,.38),transparent 70%),
+  radial-gradient(700px 500px at 100% 40%,rgba(30,64,175,.3),transparent 70%),
+  radial-gradient(700px 500px at 0% 75%,rgba(30,64,175,.26),transparent 70%);
+  background-attachment:fixed}
+a{color:inherit;text-decoration:none}
+:focus-visible{outline:2px solid var(--rose);outline-offset:3px;border-radius:8px}
+svg.i{width:1em;height:1em;fill:none;stroke:currentColor;stroke-width:2;stroke-linecap:round;stroke-linejoin:round;flex:none}
+.wrap{width:min(1120px,92%);margin:0 auto}
+section{padding:110px 0 40px}
+h1,h2,h3{font-family:var(--serif);line-height:1.15;letter-spacing:-.01em}
+h2{font-size:clamp(1.9rem,4vw,2.6rem);margin-bottom:10px}
+.lead{color:var(--muted);max-width:60ch;margin-bottom:34px}
+
+/* floating pill nav */
+nav{position:fixed;top:18px;left:50%;transform:translateX(-50%);z-index:50;display:flex;gap:4px;padding:8px;
+  background:rgba(12,20,42,.78);backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px);
+  border:1px solid var(--line);border-radius:999px;box-shadow:0 0 40px -8px rgba(79,140,255,.45)}
+nav a{display:flex;align-items:center;gap:8px;padding:9px 16px;border-radius:999px;font-size:.88rem;font-weight:500;color:var(--rose);transition:background .25s,color .25s,transform .25s,box-shadow .25s}
+nav a:hover{background:rgba(79,140,255,.16);color:#fff;transform:translateY(-1px)}
+nav a.active{background:linear-gradient(135deg,#4f8cff,#2563eb);color:#fff;box-shadow:0 6px 20px -4px rgba(79,140,255,.7)}
+
+/* buttons */
+.btn{display:inline-flex;align-items:center;gap:8px;padding:12px 22px;border-radius:999px;font-weight:600;font-size:.92rem;border:1px solid var(--blue);cursor:pointer;font-family:inherit;transition:transform .25s,box-shadow .25s,background .25s,color .25s}
+.btn.solid{background:linear-gradient(135deg,#4f8cff,#2563eb);color:#fff;box-shadow:0 10px 28px -8px rgba(79,140,255,.75)}
+.btn.solid:hover{transform:translateY(-3px);box-shadow:0 16px 36px -8px rgba(79,140,255,.95)}
+.btn.ghost{background:transparent;color:var(--rose)}
+.btn.ghost:hover{background:rgba(79,140,255,.14);color:#fff;transform:translateY(-3px)}
+.btn svg{transition:transform .25s}
+.btn:hover svg{transform:translateX(3px)}
+.btn.dl:hover svg{transform:translateY(3px)}
+
+/* glass cards with cursor spotlight */
+.card{position:relative;padding:26px;border-radius:22px;background:rgba(255,255,255,.035);border:1px solid var(--line);overflow:hidden;
+  transition:transform .35s,border-color .35s,box-shadow .35s}
+.card::before{content:"";position:absolute;inset:0;background:radial-gradient(320px circle at var(--mx,50%) var(--my,50%),rgba(79,140,255,.22),transparent 60%);opacity:0;transition:opacity .35s;pointer-events:none}
+.card:hover{transform:translateY(-5px);border-color:rgba(130,170,255,.5);box-shadow:0 22px 55px -20px rgba(79,140,255,.6)}
+.card:hover::before{opacity:1}
+.card>*{position:relative}
+
+.chip{display:inline-block;padding:5px 12px;margin:0 6px 8px 0;border-radius:999px;font-size:.8rem;color:var(--rose);background:rgba(79,140,255,.08);border:1px solid var(--line);transition:background .25s,color .25s,transform .25s,border-color .25s}
+.chip:hover{background:var(--blue);color:#fff;border-color:var(--blue);transform:translateY(-2px)}
+
+/* hero */
+#home{overflow-x:clip;min-height:100vh;display:flex;align-items:center;padding-top:120px}
+.hero{display:grid;grid-template-columns:1.1fr .9fr;gap:50px;align-items:center}
+.badge{display:inline-flex;align-items:center;gap:8px;padding:6px 14px;border-radius:999px;font-size:.82rem;color:var(--rose);background:rgba(79,140,255,.1);border:1px solid var(--line);margin-bottom:22px}
+.badge i{width:8px;height:8px;border-radius:50%;background:#4ade80;box-shadow:0 0 10px #4ade80;animation:pulse 2s infinite}
+h1{font-size:clamp(2.6rem,6vw,4.4rem);margin-bottom:8px}
+.role{font-family:var(--serif);font-size:clamp(1.3rem,2.6vw,1.9rem);color:var(--rose);margin-bottom:20px}
+.hero p.about{color:var(--muted);max-width:52ch;margin-bottom:22px}
+.meta{display:flex;flex-wrap:wrap;gap:18px;color:var(--muted);font-size:.9rem;margin-bottom:26px}
+.meta span{display:inline-flex;align-items:center;gap:7px}
+.meta svg{color:var(--blue)}
+.cta{display:flex;flex-wrap:wrap;gap:12px;margin-bottom:30px}
+.follow{display:flex;align-items:center;gap:14px;padding-top:22px;border-top:1px solid var(--line);max-width:420px;color:var(--muted);font-size:.9rem}
+.follow a{width:40px;height:40px;display:grid;place-items:center;border-radius:50%;border:1px solid var(--line);color:var(--rose);font-size:1.05rem;transition:transform .25s,background .25s,color .25s,box-shadow .25s}
+.follow a:hover{background:var(--blue);color:#fff;transform:translateY(-4px) scale(1.06);box-shadow:0 10px 24px -6px rgba(79,140,255,.8)}
+
+/* orbit (hero focal element) */
+.stage{position:relative;aspect-ratio:1;max-width:460px;width:100%;margin:0 auto;display:grid;place-items:center}
+.orb{position:absolute;width:48%;aspect-ratio:1;border-radius:50%;display:grid;place-items:center;text-align:center;
+  background:radial-gradient(circle at 50% 35%,#3b82f6,#1e3a8a 60%,#0f1d44 100%);box-shadow:0 0 70px 10px rgba(79,140,255,.45),inset 0 0 40px rgba(0,0,0,.35);animation:breathe 5s ease-in-out infinite}
+.orb .lap{display:block;font-size:clamp(2.6rem,7vw,4rem);line-height:1;margin-bottom:6px;filter:drop-shadow(0 6px 14px rgba(0,0,0,.45));font-family:'Apple Color Emoji','Segoe UI Emoji','Noto Color Emoji',sans-serif}
+.orb b{display:block;font-family:var(--serif);font-size:clamp(1.05rem,2.6vw,1.35rem);letter-spacing:.01em}
+.orb small{display:block;font-size:.7rem;color:#cfe0ff}
+.ring{position:absolute;inset:6%;border-radius:50%;border:1px dashed rgba(130,170,255,.3);animation:spin 40s linear infinite}
+.orbit{position:absolute;inset:0;animation:spin 30s linear infinite}
+.stage:hover .orbit,.stage:hover .tag-in{animation-play-state:paused}
+.tag{position:absolute;top:50%;left:50%;width:0;height:0;transform:rotate(var(--a)) translateX(calc(min(230px,50vw*.46))) rotate(calc(var(--a) * -1))}
+.tag-in i{display:inline-block;width:8px;height:8px;border-radius:50%;margin-right:8px}
+.tag-in{position:absolute;transform:translate(-50%,-50%);white-space:nowrap;padding:8px 14px;border-radius:999px;font-size:.78rem;font-weight:600;color:#fff;
+  background:rgba(14,24,50,.92);border:1px solid rgba(130,170,255,.4);box-shadow:0 0 22px -4px rgba(79,140,255,.6);animation:spin-rev 30s linear infinite;transition:background .25s,box-shadow .25s;cursor:default}
+.tag-in:hover{background:var(--blue);box-shadow:0 0 30px 2px rgba(79,140,255,.9)}
+
+/* about */
+.facts{display:grid;grid-template-columns:repeat(4,1fr);gap:16px;margin-top:26px}
+.facts .card{padding:20px}
+.facts small{display:block;color:var(--muted);font-size:.78rem;margin-bottom:4px}
+.facts b{font-weight:600}
+.about-grid{display:grid;grid-template-columns:1.2fr .8fr;gap:22px}
+.about-grid p+p{margin-top:12px}
+.about-grid p{color:var(--muted)}
+.about-grid strong{color:var(--text);font-weight:600}
+
+/* timeline */
+.timeline{position:relative;padding-left:34px}
+.timeline::before{content:"";position:absolute;left:8px;top:8px;bottom:8px;width:2px;background:linear-gradient(var(--blue),rgba(79,140,255,.05))}
+.job{position:relative;margin-bottom:22px}
+.job::before{content:"";position:absolute;left:-34px;top:30px;width:18px;height:18px;border-radius:50%;background:var(--bg);border:3px solid var(--blue);box-shadow:0 0 16px rgba(79,140,255,.7);transition:transform .3s,background .3s}
+.job:hover::before{transform:scale(1.25);background:var(--blue)}
+.job-head{display:flex;flex-wrap:wrap;justify-content:space-between;gap:6px 20px;margin-bottom:4px}
+.job h3{font-size:1.3rem}
+.job h3 em{font-style:normal;color:var(--rose)}
+.when{color:var(--rose);font-size:.88rem;font-weight:500}
+.where{color:var(--muted);font-size:.88rem;margin-bottom:12px}
+.job ul{margin:0 0 14px 18px;color:var(--muted)}
+.job li{margin-bottom:6px}
+.job li::marker{color:var(--blue)}
+.job li b{color:var(--text);font-weight:600}
+
+/* skills + projects */
+.grid3{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+.grid2{display:grid;grid-template-columns:repeat(2,1fr);gap:18px}
+.card h3{font-size:1.15rem;margin-bottom:12px}
+.card p{color:var(--muted);font-size:.93rem;margin-bottom:14px}
+.plink{display:inline-flex;align-items:center;gap:6px;font-size:.88rem;font-weight:600;color:var(--rose);border-bottom:1px solid transparent;transition:border-color .25s,gap .25s,color .25s}
+.plink:hover{border-color:var(--rose);gap:10px;color:#fff}
+.tagline{font-size:.78rem;color:var(--blue);font-weight:600;margin-bottom:8px}
+
+/* contact */
+.contact{display:grid;grid-template-columns:1fr 1fr;gap:34px;align-items:start}
+.clist{list-style:none;margin:22px 0}
+.clist li{margin-bottom:14px}
+.clist a,.clist span{display:inline-flex;align-items:center;gap:12px;color:var(--text);transition:color .25s,transform .25s}
+.clist a:hover{color:var(--rose);transform:translateX(4px)}
+.clist svg{color:var(--blue);font-size:1.15rem}
+form.card{display:grid;gap:12px}
+input,textarea{width:100%;padding:13px 15px;border-radius:12px;border:1px solid var(--line);background:rgba(0,0,0,.28);color:var(--text);font:inherit;font-size:.92rem;transition:border-color .25s,box-shadow .25s}
+input::placeholder,textarea::placeholder{color:#7184a8}
+input:focus,textarea:focus{outline:none;border-color:var(--blue);box-shadow:0 0 0 3px rgba(79,140,255,.2)}
+textarea{min-height:120px;resize:vertical}
+.note{font-size:.78rem;color:var(--muted)}
+footer{text-align:center;color:var(--muted);font-size:.85rem;padding:60px 0 40px}
+
+/* reveal on scroll (section-level only) */
+.rv{opacity:0;transform:translateY(22px);transition:opacity .7s,transform .7s}
+.rv.in{opacity:1;transform:none}
+
+@keyframes spin{to{transform:rotate(360deg)}}
+@keyframes spin-rev{to{transform:translate(-50%,-50%) rotate(-360deg)}}
+@keyframes breathe{50%{transform:scale(1.05);box-shadow:0 0 90px 16px rgba(79,140,255,.55),inset 0 0 40px rgba(0,0,0,.35)}}
+@keyframes pulse{50%{opacity:.4}}
+
+@media (max-width:900px){
+  .hero,.about-grid,.contact{grid-template-columns:1fr}
+  .grid3{grid-template-columns:1fr 1fr}.facts{grid-template-columns:1fr 1fr}
+  .stage{max-width:380px}
+}
+@media (max-width:620px){
+  nav a span{display:none}nav a{padding:11px 14px}nav{top:12px}
+  .grid3,.grid2{grid-template-columns:1fr}
+  .tag{transform:rotate(var(--a)) translateX(33vw) rotate(calc(var(--a) * -1))}
+  section{padding-top:90px}
+}
+@media (prefers-reduced-motion:reduce){
+  *,*::before,*::after{animation:none!important;transition:none!important;scroll-behavior:auto!important}
+  .rv{opacity:1;transform:none}
+}
+</style>
+</head>
+<body>
+
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <defs>
+    <symbol id="home" viewBox="0 0 24 24"><path d="M3 11l9-8 9 8v10a1 1 0 0 1-1 1h-5v-7H9v7H4a1 1 0 0 1-1-1z"/></symbol>
+    <symbol id="user" viewBox="0 0 24 24"><circle cx="12" cy="8" r="4"/><path d="M4 21a8 8 0 0 1 16 0"/></symbol>
+    <symbol id="brief" viewBox="0 0 24 24"><rect x="3" y="7" width="18" height="13" rx="2"/><path d="M9 7V5a2 2 0 0 1 2-2h2a2 2 0 0 1 2 2v2M3 13h18"/></symbol>
+    <symbol id="code" viewBox="0 0 24 24"><path d="M16 18l6-6-6-6M8 6l-6 6 6 6"/></symbol>
+    <symbol id="folder" viewBox="0 0 24 24"><path d="M3 6a2 2 0 0 1 2-2h4l2 3h8a2 2 0 0 1 2 2v9a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/></symbol>
+    <symbol id="mail" viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="M3 7l9 6 9-6"/></symbol>
+    <symbol id="phone" viewBox="0 0 24 24"><path d="M5 4h4l2 5-2.5 1.5a11 11 0 0 0 5 5L15 13l5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 3 6a2 2 0 0 1 2-2z"/></symbol>
+    <symbol id="pin" viewBox="0 0 24 24"><path d="M12 21s7-6.2 7-11a7 7 0 0 0-14 0c0 4.8 7 11 7 11z"/><circle cx="12" cy="10" r="2.5"/></symbol>
+    <symbol id="in" viewBox="0 0 24 24"><rect x="3" y="3" width="18" height="18" rx="3"/><path d="M8 11v6M8 7.5v.01M12 17v-6m0 3a3 3 0 0 1 6 0v3"/></symbol>
+    <symbol id="dl" viewBox="0 0 24 24"><path d="M12 3v12m0 0l-4-4m4 4l4-4M4 21h16"/></symbol>
+    <symbol id="arrow" viewBox="0 0 24 24"><path d="M5 12h14m-6-6l6 6-6 6"/></symbol>
+    <symbol id="ext" viewBox="0 0 24 24"><path d="M14 4h6v6M20 4l-9 9M18 14v5a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1V7a1 1 0 0 1 1-1h5"/></symbol>
+  </defs>
+</svg>
+
+<nav aria-label="Primary">
+  <a href="#home" class="active"><svg class="i"><use href="#home"/></svg><span>Home</span></a>
+  <a href="#about"><svg class="i"><use href="#user"/></svg><span>About</span></a>
+  <a href="#experience"><svg class="i"><use href="#brief"/></svg><span>Experience</span></a>
+  <a href="#skills"><svg class="i"><use href="#code"/></svg><span>Skills</span></a>
+  <a href="#projects"><svg class="i"><use href="#folder"/></svg><span>Projects</span></a>
+  <a href="#contact"><svg class="i"><use href="#mail"/></svg><span>Contact</span></a>
+</nav>
+
+<main>
+<!-- HOME -->
+<section id="home">
+  <div class="wrap hero">
+    <div>
+      <div class="badge"><i></i> Open to senior engineering roles</div>
+      <h1>Hi, I'm Deependra</h1>
+      <div class="role">Senior Software Engineer</div>
+      <p class="about">I build backend platforms and full-stack products with Node.js, Nest.js and React. Six years in product companies across HRMS, FinTech and data enrichment, most recently on the performance management platform at PeopleStrong.</p>
+      <div class="meta">
+        <span><svg class="i"><use href="#pin"/></svg>Gurugram, India</span>
+        <span><svg class="i"><use href="#brief"/></svg>6 years, 3 product companies</span>
+      </div>
+      <div class="cta">
+        <a class="btn solid" href="#contact">Hire me <svg class="i"><use href="#arrow"/></svg></a>
+        <a class="btn ghost dl" href="Deependra_Singh_Resume.pdf" download>Download CV <svg class="i"><use href="#dl"/></svg></a>
+      </div>
+      <div class="follow">Find me on
+        <a href="https://www.linkedin.com/in/deependra-singh-95a444141"
